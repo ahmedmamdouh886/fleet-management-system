@@ -20,6 +20,8 @@ class CreateBusesTable extends Migration
             $table->string('seats_count')->comment('How many seats the bus has.');
             $table->timestamps();
             $table->softDeletes();
+
+            $table->unique('plate_num');
         });
     }
 
