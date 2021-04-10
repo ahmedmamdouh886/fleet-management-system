@@ -10,8 +10,8 @@ class Auth implements AuthInterface
 {
     /**
      * User model instance.
-     * 
-     * @var $user.
+     *
+     * @var.
      */
     protected $user;
 
@@ -30,13 +30,13 @@ class Auth implements AuthInterface
      *
      * @param string $email the user email.
      * @param string $password the user password.
-     * 
+     *
      * @return array ['token' => 'token', 'type' => 'bearer', 'user' => 'user instance'] the authentication info.
      */
     public function login(string $email, string $password): array
     {
         if (! FacadesAuth::attempt(['email' => $email, 'password' => $password])) {
-            throw new InvalidCredentialExcption("Invalid email/password");
+            throw new InvalidCredentialExcption('Invalid email/password');
         }
 
         $user = $this->user->findByEmail($email);
@@ -44,7 +44,7 @@ class Auth implements AuthInterface
         return [
             'token' => $user->createToken('robusta_token')->plainTextToken,
             'type' => 'bearer',
-            'user' => $user
+            'user' => $user,
         ];
     }
 }

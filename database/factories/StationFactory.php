@@ -22,7 +22,7 @@ class StationFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'Cairo'
+            'name' => 'Cairo',
         ];
     }
 }

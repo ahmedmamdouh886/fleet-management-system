@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Bus;
 use App\Models\BusSeat;
 use Illuminate\Database\Eloquent\Factories\Factory;
 

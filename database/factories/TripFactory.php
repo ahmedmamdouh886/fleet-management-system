@@ -24,7 +24,7 @@ class TripFactory extends Factory
     {
         return [
             'bus_id' => Bus::factory(1)->hasSeats(12)->create()->first()->id,
-            'notes' => null
+            'notes' => null,
         ];
     }
 }

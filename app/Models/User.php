@@ -42,10 +42,10 @@ class User extends Authenticatable
     ];
 
     /**
-     * Find user by email
+     * Find user by email.
      *
      * @param string $email the user email.
-     * 
+     *
      * @return self|null user instance or null.
      */
     public function findByEmail(string $email): ?self

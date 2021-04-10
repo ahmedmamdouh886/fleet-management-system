@@ -17,7 +17,7 @@ class TripSeeder extends Seeder
     {
         // Station list.
         $stations = ['Cairo', 'AlFayyum', 'AlMinya', 'Asyut'];
-        
+
         // Create stations.
         $stationInstances = collect([]);
         collect($stations)->each(function ($item) use ($stationInstances) {

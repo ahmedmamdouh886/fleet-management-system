@@ -30,8 +30,8 @@ class AuthController extends Controller
     {
         try {
             $res = $this->auth->login($request->input('email'), $request->input('password'));
-            
-            return response()->json(['data' => $res], Response::HTTP_CREATED);
+
+            return response()->json(['data' => $res], Response::HTTP_CREATED); // Response should be in a resource layer.
         } catch (InvalidCredentialExcption $th) {
             return response()->json(['message' => __('auth.failed')], Response::HTTP_UNAUTHORIZED);
         } catch (\Throwable $th) {
