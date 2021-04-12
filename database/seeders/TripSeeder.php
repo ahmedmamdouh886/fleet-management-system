@@ -26,8 +26,8 @@ class TripSeeder extends Seeder
 
         // Create a Trip and its relations.
         Trip::factory()->create()->each(function ($trip) use ($stationInstances) {
-            $stationInstances->each(function ($station) use ($trip) {
-                $route = 1;
+            $route = 1;
+            $stationInstances->each(function ($station) use ($trip, &$route) { 
                 $trip->stations()->attach($station->id, ['route' => $route++]);
             });
         });
