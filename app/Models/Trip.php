@@ -27,6 +27,16 @@ class Trip extends Model
     }
 
     /**
+     * The stations that belong to the trip.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
+    /**
      * Scope a query to only include not full trips.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query

@@ -20,9 +20,9 @@ class Trip implements TripInterface
      *
      * @return void
      */
-    public function __construct(TripModel $trip, Route $route)
+    public function __construct(TripModel $tripModel, Route $route)
     {
-        $this->trip = $trip;
+        $this->tripModel = $tripModel;
         $this->route = $route;
     }
 
@@ -46,6 +46,6 @@ class Trip implements TripInterface
             }
         });
 
-        return $this->trip->withAvailableBusSeatsAndStations()->notFull()->whereIn('id', $destinationTripsIds)->paginate(10);
+        return $this->tripModel->withAvailableBusSeatsAndStations()->notFull()->whereIn('id', $destinationTripsIds)->paginate(10);
     }
 }
