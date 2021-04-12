@@ -15,4 +15,24 @@ class BusSeat extends Model
      * @var array
      */
     protected $fillable = ['bus_id', 'ref_id'];
+
+    /**
+     * The trips that belong to the trip.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function trip()
+    {
+        // return $this->belongsTo(Booking::class);
+    }
+
+    /**
+     * The trips that belong to the trip.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function booking()
+    {
+        return $this->hasMany(Booking::class, 'seat_id');
+    }
 }

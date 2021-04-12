@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\V1\AuthController;
+use App\Http\Controllers\API\V1\TripController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::namespace('App\Http\Controllers\API\V1')->prefix('v1')->group(function () {
+Route::prefix('v1')->group(function () {
     Route::post('/login', [AuthController::class, 'store']);
+    Route::get('/trips', [TripController::class, 'index']);
 });
