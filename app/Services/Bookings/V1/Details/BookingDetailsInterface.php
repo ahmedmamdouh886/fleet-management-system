@@ -2,7 +2,6 @@
 
 namespace App\Services\Bookings\V1\Details;
 
-
 interface BookingDetailsInterface
 {
     /**

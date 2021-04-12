@@ -2,8 +2,6 @@
 
 namespace App\Services\Bookings\V1;
 
-use Illuminate\Pagination\LengthAwarePaginator;
-
 interface BookingInterface
 {
     /**

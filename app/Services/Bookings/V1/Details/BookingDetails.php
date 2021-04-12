@@ -2,8 +2,6 @@
 
 namespace App\Services\Bookings\V1\Details;
 
-use App\Services\Bookings\V1\Details\BookingDetailsInterface;
-
 class BookingDetails implements BookingDetailsInterface
 {
     /**
@@ -16,7 +14,7 @@ class BookingDetails implements BookingDetailsInterface
     public function getDetails(int $bookId): array
     {
         return [
-            'booking details.'
+            'booking details.',
         ];
     }
 }

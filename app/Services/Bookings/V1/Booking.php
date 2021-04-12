@@ -3,11 +3,9 @@
 namespace App\Services\Bookings\V1;
 
 use App\Models\Booking as ModelsBooking;
-use App\Models\Route;
 use App\Models\Trip as TripModel;
 use App\Models\User as UserModel;
 use App\Services\Bookings\V1\Details\BookingDetailsInterface;
-use Illuminate\Pagination\LengthAwarePaginator;
 
 class Booking implements BookingInterface
 {

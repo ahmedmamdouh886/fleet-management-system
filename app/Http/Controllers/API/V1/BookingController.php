@@ -4,10 +4,7 @@ namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\API\V1\StoreBookingRequest;
-use App\Http\Resources\API\V1\TripResource;
 use App\Services\Bookings\V1\BookingInterface;
-use App\Services\Trips\V1\TripInterface;
-use Illuminate\Http\Request;
 use Illuminate\HTTP\Response;
 
 class BookingController extends Controller
@@ -33,13 +30,13 @@ class BookingController extends Controller
     public function store(StoreBookingRequest $request)
     {
         try {
-            
             $bookingDetails = $this->booking->book($request->input('trip_id'), auth()->user()->id, $request->input('seat_id'));
 
             // TODO: should return the booking details.
             return response()->json(['data' => $bookingDetails]); // Should be resource.
         } catch (\Throwable $th) {
             dd($th->getMessage());
+
             return response()->json(['message' => __('messages.internal_server_error')], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }

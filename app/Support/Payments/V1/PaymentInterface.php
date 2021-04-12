@@ -2,8 +2,6 @@
 
 namespace App\Support\Payment\V1;
 
-use Illuminate\Pagination\LengthAwarePaginator;
-
 interface PaymentInterface
 {
     /**

@@ -27,7 +27,7 @@ class StoreBookingRequest extends FormRequest
         return [
             'trip_id' => ['required', 'integer', 'exists:trips,id'],
             'seat_id' => ['required', 'integer', 'exists:bus_seats,id'],
-            'payment_way' => ['required', Rule::in(['cash', 'visa'])]
+            'payment_way' => ['required', Rule::in(['cash', 'visa'])],
         ];
     }
 }
