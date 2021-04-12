@@ -18,7 +18,7 @@ class Route extends Pivot
 
     /**
      * The trips that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function trip()
@@ -28,10 +28,10 @@ class Route extends Pivot
 
     /**
      * Get station routes.
-     * 
+     *
      * @param int $fromStation
-     * 
-     * @return 
+     *
+     * @return
      */
     public function whereStation(int $stationId)
     {
@@ -40,9 +40,9 @@ class Route extends Pivot
 
     /**
      * Get available starting stations routes.
-     * 
+     *
      * @param int $fromStation
-     * 
+     *
      * @return
      */
     public function getAvailableStartingStationsRoutes(int $stationId)
@@ -52,11 +52,11 @@ class Route extends Pivot
 
     /**
      * Get Available Ending Stations Routes.
-     * 
+     *
      * @param int $stationId
      * @param int $tripId
      * @param int $route
-     * 
+     *
      * @return
      */
     public function getAvailableEndingStationsRoute(int $stationId, int $tripId, int $startingRoute)

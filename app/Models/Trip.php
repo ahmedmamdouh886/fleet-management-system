@@ -18,7 +18,7 @@ class Trip extends Model
 
     /**
      * The stations that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function stations()
@@ -53,8 +53,6 @@ class Trip extends Model
         }]);
     }
 
-    
-
     /**
      * Scope a query to only include specific trip id.
      *
@@ -69,7 +67,7 @@ class Trip extends Model
 
     /**
      * The stations that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function bus()
@@ -79,7 +77,7 @@ class Trip extends Model
 
     /**
      * The stations that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function busSeats()

@@ -11,7 +11,7 @@ class Trip implements TripInterface
     /**
      * Trip model instance.
      *
-     * @var $trip
+     * @var
      */
     protected $trip;
 
@@ -45,7 +45,7 @@ class Trip implements TripInterface
                 $destinationTripsIds[] = $destinationRoute->trip_id;
             }
         });
-        
+
         return $this->trip->withAvailableBusSeatsAndStations()->notFull()->whereIn('id', $destinationTripsIds)->paginate(10);
     }
 }

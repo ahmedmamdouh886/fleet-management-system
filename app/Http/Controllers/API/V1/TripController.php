@@ -12,9 +12,9 @@ class TripController extends Controller
 {
     /**
      * Class constructor.
-     * 
+     *
      * @param \App\Services\Trips\V1\TripInterface The trip abstraction. DIP.
-     * 
+     *
      * @return void
      */
     public function __construct(TripInterface $trip)
@@ -31,7 +31,7 @@ class TripController extends Controller
     {
         try {
             $trips = $this->trip->listAvailableTrips((int) $request->input('from_station_id'), (int) $request->input('to_station_id'));
-            
+
             return TripResource::collection($trips);
         } catch (\Throwable $th) {
             return response()->json(['message' => __('messages.internal_server_error')], Response::HTTP_INTERNAL_SERVER_ERROR);

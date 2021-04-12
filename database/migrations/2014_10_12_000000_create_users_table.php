@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
 
             $table->unique('email');
         });
-
+        
         $this->seed();
     }
 

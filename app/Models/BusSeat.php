@@ -18,7 +18,7 @@ class BusSeat extends Model
 
     /**
      * The trips that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function trip()
@@ -28,7 +28,7 @@ class BusSeat extends Model
 
     /**
      * The trips that belong to the trip.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function booking()

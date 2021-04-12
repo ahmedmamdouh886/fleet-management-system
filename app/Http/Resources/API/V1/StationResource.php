@@ -16,7 +16,7 @@ class StationResource extends JsonResource
     {
         return [
             'name' => $this->name,
-            'route' => $this->pivot->route
+            'route' => $this->pivot->route,
         ];
     }
 }

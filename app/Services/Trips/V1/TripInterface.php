@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Services\Trips\V1;
-use Illuminate\Database\Eloquent\Collection;
+
 use Illuminate\Pagination\LengthAwarePaginator;
 
 interface TripInterface

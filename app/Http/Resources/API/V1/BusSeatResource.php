@@ -16,7 +16,7 @@ class BusSeatResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'ref_id' => $this->ref_id
+            'ref_id' => $this->ref_id,
         ];
     }
 }

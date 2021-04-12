@@ -13,6 +13,8 @@ class AuthController extends Controller
     /**
      * Class constructor.
      *
+     * @param \App\Services\Auth\V1\AuthInterface The auth abstraction. DIP.
+     *
      * @return void
      */
     public function __construct(AuthInterface $auth)
