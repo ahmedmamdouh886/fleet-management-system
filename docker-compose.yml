@@ -30,7 +30,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
-      - dbdata:/var/lib/mysql/
+      - ./docker-compose/mysql/:/var/lib/mysql
     networks:
       - fleet-management-system
 
@@ -45,10 +45,6 @@ services:
       - ./docker-compose/nginx:/etc/nginx/conf.d
     networks:
       - fleet-management-system
-
-volumes:
-  dbdata:
-    driver: local
 
 networks:
   fleet-management-system:
