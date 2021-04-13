@@ -12,11 +12,17 @@ A trivial mimic Fleet-management system.
 ```bash
 git clone https://github.com/ahmedmamdouh886/fleet-management-system.git
 cd fleet-management-system
+cp .env.example .env
 docker-compose up --build
+docker-compose exec app composer install
+docker-compose exec app php artisan migrate
+docker-compose exec app php artisan db:seed
 ``` 
 ### Step 2
 
-* Visit: http://localhost:8000
+* Visit: GET http://localhost:8000/api/v1/trips
+* Visit: POST http://localhost:8000/api/v1/bookings
+* Visit: POST http://localhost:8000/api/v1/login
 
 ## Files structure
 
