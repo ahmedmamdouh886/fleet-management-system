@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\API\V1\TripRequest;
 use App\Http\Resources\API\V1\TripResource;
 use App\Services\Trips\V1\TripInterface;
-use Illuminate\Http\Request;
 use Illuminate\HTTP\Response;
 
 class TripController extends Controller

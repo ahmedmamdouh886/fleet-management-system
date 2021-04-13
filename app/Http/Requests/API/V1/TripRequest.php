@@ -25,7 +25,7 @@ class TripRequest extends FormRequest
     {
         return [
             'from_station_id' => ['required', 'integer', 'exists:stations,id'],
-            'to_station_id' => ['required', 'integer', 'exists:stations,id']
+            'to_station_id' => ['required', 'integer', 'exists:stations,id'],
         ];
     }
 }

@@ -19,9 +19,12 @@ docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 ``` 
 ### Step 2
-# Credential
+## Credential
+
 * email: tech@robustastudio.com
 * password: password
+
+## Endpoint
 
 * Visit: POST http://localhost:8000/api/v1/login -> Login.
 * Visit: GET http://localhost:8000/api/v1/trips -> List available trips.
